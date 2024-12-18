@@ -1,0 +1,19 @@
+
+
+salaries <- c(1000000, 900000, 10000, 25000, 20000, 20000, 30000)
+
+# Creating a histogramm
+hist(salaries,
+     breaks = seq(0, 1000000, by = 10000),  
+     
+# Customise
+     col = "lightblue",
+     main = "Histogram of Gross Annual Salaries",
+     xlab = "Gross Annual Salary (in €)",
+     ylab = "Frequency",
+     border = "black",
+     xaxt = "n") 
+
+# Adding customised x-axis labels
+axis(1, at = seq(0, 1000000, by = 10000), labels = paste(seq(0, 1000000, by = 10000)/1000, "-", seq(10000, 1000000, by = 10000)/1000, "thousand"))
+
